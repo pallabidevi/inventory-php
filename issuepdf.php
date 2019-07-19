@@ -1,5 +1,5 @@
 <?php
-include_once("conn.php");
+include_once("connection.php");
 require("fpdf181/fpdf.php");
 
 class PDF extends FPDF
@@ -60,9 +60,9 @@ function FancyTable($header)
 }
 $db = new dbObj();
 $connString =  $db->getConnstring();
-$result = mysqli_query($connString, "SELECT matid,issuedto,issuedfrom,quantityofreq,issuequan,rate,amount FROM issue") or die("database error:". mysqli_error($connString));
+$result = mysqli_query($connString, "select * from issue i join materials m on i.mid = m.mid join subdivision s on s.sdivid=i.issuedto join division d on d.divid=i.issuedfrom ") or die("database error:". mysqli_error($connString));
 // Column headings
-$header = array('Material Code', 'Issued To', 'Issued From', 'Quantity of requisition' , 'Issued Quantity','Rate','Amount');
+$header = array('Material Name', 'Issued To', 'Issued From', 'Quantity of requisition' , 'Issued Quantity','Rate','Amount');
 
 $pdf = new PDF();
 $pdf->AddPage('L');
@@ -74,9 +74,9 @@ $pdf->FancyTable($header);
 foreach($result as $row) {
     $pdf->Ln();
     //foreach($row as $column)
-    $pdf->Cell(30,12,$row['matid'],1,0,'');
-    $pdf->Cell(23,12,$row['issuedto'],1,0,'',true);
-    $pdf->Cell(28,12,$row['issuedfrom'],1,0,'',true);
+    $pdf->Cell(30,12,$row['mname'],1,0,'');
+    $pdf->Cell(23,12,$row['sdivname'],1,0,'',true);
+    $pdf->Cell(28,12,$row['divname'],1,0,'',true);
     $pdf->Cell(38,12,$row['quantityofreq'],1,0,'b',true);
     $pdf->Cell(28,12,$row['issuequan'],1,0,'',true);
     $pdf->Cell(20,12,$row['rate'],1,0,'',true);

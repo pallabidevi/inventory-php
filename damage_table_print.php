@@ -28,11 +28,11 @@ tr:nth-child(even) {
 </head>
 <body>
 
-<h2>Stocks Table</h2>
+<h2>DamageTable</h2>
 <form>
 <table>
   <tr>
-<th scope="col">Damaged Id</th>
+<th scope="col">Material Code</th>
 <th scope="col">Material Name</th>
 <th scope="col">Quantity</th>
 </tr>
@@ -41,7 +41,7 @@ tr:nth-child(even) {
         {           
       ?>
   <tr>
-  <td><?php echo $row['damid'] ?></td>
+  <td><?php echo $row['matcode'] ?></td>
 <td><?php echo $row['mname'] ?></td>
 <td><?php echo $row['quantity'] ?></td>
 <td>  </tr>

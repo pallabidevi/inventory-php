@@ -55,7 +55,7 @@
                                     <div class="table-data__tool">
                                     <div class="table-data__tool-left">
                                     <div class="rs-select2--light rs-select2--md-10">
-                                                <form action='stocks.php'>
+                                                <form action='stocks2.php'>
                                                     <label class="form-control-label">Expiry date  :</label>
                                                     <input type="date"  name="expiry" >
                                                     <button class="au-btn-filter">
@@ -71,7 +71,7 @@
                                                 <select class="js-select2" onchange="javascript:location.href = this.value;" name="type">
                                                     <option selected="selected">Export</option>
                                                     <option value="stockpdf.php">PDF</option>
-                                                    <option value="">EXCEL</option>
+                                                    
                                                 </select>
                                                 <div class="dropDownSelect2"></div>
                                                 </div>

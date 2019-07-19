@@ -39,41 +39,7 @@ $join=mysqli_query($conn,"select * from damage, materials where damage.mcode= ma
 
 ?><!-- Dark table start -->
 
-                        <div class="card">
-                            <div class="card-body">
-                                    <h4 class="header-title">Damage Table</Table></h4>
-                                <div class="table-responsive table-responsive-data2">
-                                    <div class="data-tables datatable-dark">
-                                    <div class="table-data__tool">
-                                    <div class="table-data__tool-left">
-                                    <div class="rs-select2--light rs-select2--md-10">
-                                                <form action='damage.php'>
-                                                </form>
-                                                    <div class="dropDownSelect2"></div>
-                                        </div>    
-                                        </div>
-                                        <div class="rs-select2--light rs-select2--md-10">
-                                            <div class="dropDownSelect2"></div>
-                                            <div class="table-data__tool-right">
-                                                <div class="rs-select2--dark rs-select2--sm rs-select2--dark2">
-                                                 <select class="js-select2" onchange="javascript:location.href = this.value;" name="type">
-                                                    <option selected="selected">Export</option>
-                                                    <option value="stockpdf.php">PDF</option>
-                                                    <option value="">EXCEL</option>
-                                                </select>
-                                                <div class="dropDownSelect2"></div>
-                                                </div>
-                                                <button class="au-btn au-btn-icon au-btn--green au-btn--small">
-                                                    <a href="damage_table_print.php">Print</a>
-                                            </div>
-                                        </button></div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
+                        
                     <div class="col-12 mt-5">
                         <div class="card">
                             <div class="card-body">
@@ -83,7 +49,7 @@ $join=mysqli_query($conn,"select * from damage, materials where damage.mcode= ma
                                     <table id="dataTable3" class="text-center">
                                         <thead class="text-capitalize">
                                             <tr>
-                                            <th scope="col">Damaged Id</th>
+                                            <th scope="col">Material Code</th>
                                             <th scope="col">Material Name</th>
                                             <th scope="col">Quantity</th>
                                             </tr>
@@ -91,7 +57,7 @@ $join=mysqli_query($conn,"select * from damage, materials where damage.mcode= ma
                                         <tbody>
                                             <?php while($row = mysqli_fetch_array($join)): ?>
                                                 <tr>
-                                                    <td><?php echo $row['damid'] ?></td>
+                                                    <td><?php echo $row['matcode'] ?></td>
                                                     <td><?php echo $row['mname'] ?></td>
                                                     <td><?php echo $row['quantity'] ?></td>
                                                     <td>
@@ -106,7 +72,13 @@ $join=mysqli_query($conn,"select * from damage, materials where damage.mcode= ma
                         </div>
                     </div></div>
                     <!-- Dark table end -->
-                
+                    <div class="table-data__tool-right">
+                                               
+                                               <button class="au-btn au-btn-icon au-btn--green au-btn--small">
+                                                   <a href="damage_table_print.php">Print</a>
+                                           </div>
+                                       </button></div>
+
             </div>
         </div>
         <!-- main content area end -->

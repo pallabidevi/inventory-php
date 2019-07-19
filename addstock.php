@@ -15,7 +15,6 @@ if(isset($_GET['mid'])){
     $matexe=mysqli_query($conn,"select * from materials where mid='$mid'");
 
     $mat = mysqli_fetch_array($matexe);
-
 }
 
 ?>
@@ -181,10 +180,7 @@ if(isset($_GET['mid'])){
                         <button type="submit" class="btn btn-success btn-sm">
                             <i class="fa fa-dot-circle-o"></i> Submit
                         </button>
-                        <button type="reset" class="btn btn-danger btn-sm">
-                            <i class="fa fa-ban"></i> Reset
-                        </button>
-                </div>
+                              </div>
 
                             <?php
                         }

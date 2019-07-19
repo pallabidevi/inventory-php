@@ -17,8 +17,8 @@ include('conn.php');
                                         <small> 
                                         
                                         <?php
-                                        if(isset($_GET['div'])){
-                                            if($_GET['div']=='ok'){
+                                        if(isset($_GET['pic'])){
+                                            if($_GET['pic']=='ok'){
                                                 ?>
                                                 <div class="sufee-alert alert with-close alert-success alert-dismissible fade show">
                                                 <span class="badge badge-pill badge-success">Success</span>

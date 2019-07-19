@@ -151,7 +151,7 @@ $resu=mysqli_query($conn,"select * from division");
                     <div class="col-lg-6">
                       <div class="form-group">
                         <label class="form-control-label" for="input-phone-no">Phone No</label>
-                        <input type="text" id="input-phone-no" class="form-control form-control-alternative"  name="phone" required>
+                        <input type="number" id="input-phone-no" class="form-control form-control-alternative"  name="phone" pattern="[0-9]{10}" required>
                       </div>
                     </div>
                   </div>                           
@@ -160,9 +160,7 @@ $resu=mysqli_query($conn,"select * from division");
                                         <button type="submit" class="btn btn-primary btn-sm">
                                             <i class="fa fa-dot-circle-o"></i> Submit
                                         </button>
-                                        <button type="reset" class="btn btn-danger btn-sm">
-                                            <i class="fa fa-ban"></i> Reset
-                                        </button>
+                                       
                                     </div>
                                 </div>
                                     </form>

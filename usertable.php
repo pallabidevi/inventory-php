@@ -6,11 +6,11 @@ $rs=mysqli_query($conn,"select userid,usertypes,username,firstname,email,city fr
 ?>
        <!-- MAIN CONTENT-->
             <div class="main-content">
-                <div class="section__content section__content--p30">
+                <div class="section__content section__content--p25">
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-lg-16">
-                                <div class="table-responsive table--no-card m-b-30">
+                            <div class="col-lg-12">
+                                <div class="table-responsive table--no-card m-b-25">
                                     <table class="table table-borderless table-striped table-earning">
                                         <thead>
                 <tr>

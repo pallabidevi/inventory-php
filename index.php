@@ -52,8 +52,9 @@ else{?>
                 <div class="login-wrap">
                     <div class="login-content">
                         <div class="login-logo">
+                        <img src="images/icon/logo-apdcl.jpeg">
                             INVENTORY MANAGEMENT OF ASSAM STATE<br>ELECTRICITY BOARD,JORHAT
-                                <img src="">
+                                
                         </div>
                         <div class="login-form">
                             <form action="logincheck.php" method="post">
@@ -67,9 +68,7 @@ else{?>
                                     
                                 </div>
                                 <div class="login-checkbox">
-                                    <label>
-                                        <input type="checkbox" name="remember">Remember Me
-                                    </label>
+                                   
                                     <label>
                                         <a href="forgotpass.php">Forgotten Password?</a>
                                     </label>

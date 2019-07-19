@@ -318,11 +318,11 @@ section {
 }
 
 .page-content--bgf7 {
-    background-image: url("../images/apdcl/General-Electric-Phase-Out-CFL-Bulbs-LED-Bulbs1.jpg");
+    background-image: url("../images/apdcl/image.jpg");
 }
 
 .page-content--bge5 {
-    background-image: url("../images/apdcl/General-Electric-Phase-Out-CFL-Bulbs-LED-Bulbs1.jpg");
+    background-image: url("../images/apdcl/image.jpg");
     height: 100vh;
 }
 
@@ -375,7 +375,7 @@ section {
 }
 
 .login-content {
-    background: rgba(80, 74, 122, 0.555);
+    background:transparent;
     padding: 30px 30px 20px;
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;

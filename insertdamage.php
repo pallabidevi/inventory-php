@@ -27,7 +27,7 @@ if(mysqli_query($conn,$qry))
 		echo $damid;
 		$query="update stocks set quantity='$qty' where mid='$damid'";
 		mysqli_query($conn,$query);
-		$activity="insert into activity (userid,status,description) values ('$userid','INSERT','A new record inserted into damage table and quantity is decreased')";
+		$activity="insert into activity (userid,status,description) values ('$userid','INSERT','A record inserted into damage  and quantity is decreased')";
 		mysqli_query($conn,$activity);
 		
 

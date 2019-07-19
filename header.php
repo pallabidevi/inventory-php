@@ -1,6 +1,7 @@
 <?php
 session_start();
 $sesid=$_SESSION['userid'];
+$sesuname=$_SESSION['username'];
 $sesusertype=$_SESSION['usertypes'];
 
 if(!isset($sesid))
@@ -164,7 +165,7 @@ header('location:index.php');
                        </li>
                         <li class="has-sub">
                             <a class="js-arrow" href="#">
-                                <i class="fas fa-table"></i>Tables</a>
+                                <i class="fas fa-table"></i>View</a>
                                 <ul class="list-unstyled navbar__sub-list js-sub-list">
                                     <li>
                                         <a href="material2.php">Materials </a>
@@ -258,7 +259,7 @@ header('location:index.php');
                        </li>
                         <li class="has-sub">
                             <a class="js-arrow" href="#">
-                                <i class="fas fa-table"></i>Tables</a>
+                                <i class="fas fa-table"></i>View</a>
                                 <ul class="list-unstyled navbar__sub-list js-sub-list">
                                     <li>
                                         <a href="material2.php">Materials </a>
@@ -358,9 +359,7 @@ header('location:index.php');
                                                     </div>
                                                     
                                                     <?php } ?>
-                                            <div class="notifi__footer">
-                                                <a href="notify.php">Read All notifications</a>
-                                            </div>
+                                          
                                         </div>
                                     </div>
                                 </div>
@@ -381,12 +380,12 @@ header('location:index.php');
                                             <div class="info clearfix">
                                                 <div class="image">
                                                     <a href="#">
-                                                        <img src="<?php echo $row1['userpic'] ?>" alt="<?php echo $row1['username']?>" />
+                                                        <img src="<?php echo $row1['userpic'] ?>"  />
                                                     </a>
                                                 </div>
                                                 <div class="content">
                                                     <h5 class="name">
-                                                        <a href="#"><?php echo $_SESSION['username']; ?></a>
+                                                        <a href="#"><?php echo $sesuname; ?></a>
                                                     </h5>
                                                     <span class="email"> <?php echo $row1['email'] ?></span>
                                                 </div>

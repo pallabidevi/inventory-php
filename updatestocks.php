@@ -1,7 +1,6 @@
 <?php
 session_start();
 
-
 $stockid=$_POST['mid'];
 $quantity=$_POST['quan'];
 $grsno=$_POST['grsno'];

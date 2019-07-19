@@ -40,7 +40,7 @@
         $join=mysqli_query($conn,"select * from issue i join materials m on i.mid = m.mid join subdivision s on s.sdivid=i.issuedto join division d on d.divid=i.issuedfrom where date between '$from' and '$upto'");
     }
     else{
-        $join=mysqli_query($conn,"select * from issue i join materials m on i.mid = m.mid join subdivision s on s.sdivid=i.issuedto join division d on d.divid=i.issuedfrom  ");
+        $join=mysqli_query($conn,"select * from issue i join materials m on i.mid = m.mid join subdivision s on s.sdivid=i.issuedto join division d on d.divid=i.issuedfrom ");
 
     }
     
@@ -48,7 +48,7 @@
 
                         <div class="card">
                             <div class="card-body">
-                                    <h4 class="header-title">Stocks Table</Table></h4>
+                                    <h4 class="header-title">Issued Table</Table></h4>
                                 <div class="table-responsive table-responsive-data2">
                                     <div class="data-tables datatable-dark">
                                     <div class="table-data__tool">
@@ -72,7 +72,7 @@
                                                 <select class="js-select2" onchange="javascript:location.href = this.value;" name="type">
                                                     <option selected="selected">Export</option>
                                                     <option value="issuepdf.php">PDF</option>
-                                                    <option value="">EXCEL</option>
+                                                   
                                                 </select>
                                                 <div class="dropDownSelect2"></div>
                                                 </div>
@@ -90,7 +90,7 @@
                     <div class="col-12 mt-5">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="header-title">Stocks Table</Table></h4>
+                                <h4 class="header-title">Issued Table</Table></h4>
                                 <div class="table-responsive table-responsive-data2">
                                 <div class="data-tables datatable-dark">
                                     <table id="dataTable3" class="text-center">

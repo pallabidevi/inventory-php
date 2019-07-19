@@ -84,7 +84,7 @@ if(mysqli_query($conn,$qry))
 		$query="update stocks set quantity='$qty' where stockid='$stockid'";
 		mysqli_query($conn,$query);
 		
-			$activity="insert into activity (userid,status,description) values ('$userid','UPDATE','A new record inserted into damage table and quantity is decreased')";
+			$activity="insert into activity (userid,status,description) values ('$userid','UPDATE','A material is issued ')";
 			mysqli_query($conn,$activity);
 			$notify="insert into notification (usend,description,whom_to_notify) values ('$divid','there is a item in pending to be approved',5)";
 			mysqli_query($conn,$notify);

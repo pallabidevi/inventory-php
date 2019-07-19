@@ -1,7 +1,7 @@
 <?php
 include('conn.php');
 
-$join=mysqli_query($conn,"select * from stocks s join materials m on s.mid=m.mid ");
+$join=mysqli_query($conn,"select * from stocks s join materials m on s.mid=m.mid join billtable b on b.id=s.grsid ");
 
 ?>
 
@@ -45,7 +45,7 @@ tr:nth-child(even) {
                                 
                     ?>
   <tr>
-    <td><?php echo $row['grsid'] ?></td>
+    <td><?php echo $row['grsno'] ?></td>
     <td><?php echo $row['quantity'] ?></td>
     <td><?php echo $row['mfgdate'] ?></td>
     <td><?php echo $row['expirydate'] ?></td>

@@ -18,39 +18,7 @@ else{
 <div class="row">
         <div class="col-md-12">
             <!-- DATA TABLE -->
-            <h3 class="title-5 m-b-35">data table</h3>
-            <div class="table-data__tool">
-                <div class="table-data__tool-left">
-                    <div class="rs-select2--light rs-select2--md-10">
-                    <form action='issuetable.php'>
-                        <label >From</label>
-                        <input type="date" name="from">
-                    
-                        </div>
-                        <div class="rs-select2--light rs-select2--mD-10">
-                        <label >Upto</label>
-                        <input type="date" name="upto">
-                            
-                        </div>
-                        <button class="au-btn-filter">
-                            <i class="zmdi zmdi-filter-list"></i>filters</button>
-                    </form>
-                </div>
-                <div class="table-data__tool-right">
-                    <div class="rs-select2--dark rs-select2--sm rs-select2--dark2">
-                        <select class="js-select2" onchange="javascript:location.href=this.value;" name="type">
-                            <option selected="selected">Export</option>
-                            <option value="stockpdf.php">PDF</option>
-                            <option value="">EXCEL</option>
-                        </select>
-                        <div class="dropDownSelect2"></div>
-                    </div>
-                    <button class="au-btn au-btn-icon au-btn--green au-btn--small">
-                            <a href="viewissuetable.php">Print</a>
-                    </button>
-                </div>
-            </div>
-                                <div class="table-responsive table-responsive-data2">
+                        <div class="table-responsive table-responsive-data2">
                                     <table class="table table-data2">
                                         <thead>
                                             <tr>
